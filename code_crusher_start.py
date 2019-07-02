@@ -38,14 +38,14 @@ LOSE = -1
 #
 #  Insert your implementation of createBoard here
 #
-# n -> numero de linhas
-# m -> numero de colunas
+# r -> numero de linhas
+# c -> numero de colunas
 
-def createBoard (n,m,nums):
+def createBoard (r,c,nums):
   board = []
-  for i in range(n):
+  for i in range(r):
     linha = []
-    for j in range(m):
+    for j in range(c):
       linha.append(randrange(0,nums))
     board.append(linha)
   return board
