@@ -11,7 +11,7 @@ import inspect
 import sys
 import traceback
 import os
-
+#Adicionando uma linha para teste do git
 # Where is the 'hole' for the game board in the background image?
 HOFF = 200
 VOFF = 100
