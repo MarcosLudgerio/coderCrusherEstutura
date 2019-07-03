@@ -60,7 +60,10 @@ def createBoard (r,c,nums):
 #  Returns: None -- the game board passed as a parameter is modified
 #
 def swap(board, r1, c1, r2, c2):
-  pass
+  tmp = board[r1][c1]
+  board[r1][c1] = board[r2][c2]
+  board[r2][c2] = tmp
+  return  None
 
 #
 #  Modify the board to clear all occurences of a given piece, replacing them
