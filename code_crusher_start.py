@@ -16,7 +16,7 @@ import os
 HOFF = 200
 VOFF = 100
 
-# Where should the score, target and turn counter boxes be centered?
+# #Where should the score, target and turn counter boxes be centered?
 SCORE_X = 700
 SCORE_Y = 300
 
@@ -76,7 +76,11 @@ def swap(board, r1, c1, r2, c2):
 #  Returns: None -- the game board passed as a parameter is modified
 #
 def clearAll(board, sym):
-  pass
+  for i in range (len(board)):
+    for j in range (len(board[i])):
+      if(board[i][j] == sym):
+        board[i][j] = -1
+
 
 #
 #  Insert your implementations of vLineAt and hLineAt here
