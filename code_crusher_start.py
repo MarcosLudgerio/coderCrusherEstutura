@@ -16,7 +16,7 @@ import os
 HOFF = 200
 VOFF = 100
 
-# Where should the score, target and turn counter boxes be centered?
+# #Where should the score, target and turn counter boxes be centered?
 SCORE_X = 700
 SCORE_Y = 300
 
