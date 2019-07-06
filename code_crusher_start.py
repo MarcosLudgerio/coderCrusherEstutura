@@ -76,11 +76,21 @@ def swap(board, r1, c1, r2, c2):
 #  Returns: None -- the game board passed as a parameter is modified
 #
 def clearAll(board, sym):
-  pass
+  for i in range(len(board)):
+    for j in range(len(board)):
+      if(board[i][j] == sym):
+        #board - lista, board[i] - lista, board[i][j] - int, sym - int
+        board[i][j] = EMPTY
+
+
+
+
 
 #
 #  Insert your implementations of vLineAt and hLineAt here
 #
+
+
 
 #
 #  Report whether or not two pieces on the board can be swapped.  The function
@@ -95,6 +105,7 @@ def clearAll(board, sym):
 #  Returns: True if the proposed swap creates a line.  False otherwise.
 #
 def canSwap(board, r1, c1, r2, c2):
+
   return True
 
 #
