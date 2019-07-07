@@ -88,11 +88,19 @@ def clearAll(board, sym):
 
 #
 #  Insert your implementations of vLineAt and hLineAt here
-#
+#  vLineAt - recebe o tabuleiro, uma linha e uma coluna que representa uma posição no tabuleiro
+#  vLineAt - retorna true se existe uma linha vertical com 3 simbolos iguais
+#  vLineAt - a posição indicada pode ser o inicio, meio ou fim de uma linha
+#  vLineAt - retorna true false se não tem linhas que formam um trio
+#  board - tem 6 colunas, cada uma com 5 posições possiveis
+#  0 - print, 1 - if, 2 - while, 3 - for, 4 - def
+def vLineAt(board, coluna, linha):
+  coluna2 = []
+  print(board[linha])
+  for i in range(8):
+    coluna2.append(board[i][coluna])
+  print(coluna2)
 
-
-
-#
 #  Report whether or not two pieces on the board can be swapped.  The function
 #  should only return true when performing the swap results in a line being
 #  formed.
@@ -105,9 +113,9 @@ def clearAll(board, sym):
 #  Returns: True if the proposed swap creates a line.  False otherwise.
 #
 def canSwap(board, r1, c1, r2, c2):
-
+  #c - Coluna, r - linha, 1 - o que selecionou primeiro, 2 - o que quer trocar
+  vLineAt(board, c1, r1)
   return True
-
 #
 #  Identify two adjacent positions on the board that can be swapped to 
 #  form a line.
