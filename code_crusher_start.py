@@ -79,12 +79,47 @@ def clearAll(board, sym):
   for i in range (len(board)):
     for j in range (len(board[i])):
       if(board[i][j] == sym):
-        board[i][j] = -1
+        board[i][j] = EMPTY
 
 
 #
 #  Insert your implementations of vLineAt and hLineAt here
 #
+def vLineAt (board, c):
+  meio = len(board)//2
+  contaPeca = 0
+  for i in range (meio-1,0,--1):
+    if (board[meio][c] == board[i][c] ):
+      contaPeca += 1
+    
+  for i in range (meio+1,len(board)):
+    if (board[meio][c] == board[i][c] ):
+      contaPeca += 1
+  if (contaPeca >= 3):
+    return True
+  else:
+    return False
+
+
+
+def hLineAt (board, r):
+  meio = len(board[r])//2
+  contaPeca = 0
+  for i in range (meio-1,0,--1):
+    if (board[r][meio] == board[r][i]):
+      contaPeca += 1
+  
+  for j in range (meio+1,len(board[r])):
+    if (board[r][meio] == board[r][j]):
+      contaPeca += 1
+  
+  if (contaPeca >= 3):
+    return True
+  else:
+    return False
+
+
+
 
 #
 #  Report whether or not two pieces on the board can be swapped.  The function
@@ -97,7 +132,7 @@ def clearAll(board, sym):
 #    r2, c2: The row and column of the second piece to swap
 #
 #  Returns: True if the proposed swap creates a line.  False otherwise.
-#
+
 def canSwap(board, r1, c1, r2, c2):
   return True
 
