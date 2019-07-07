@@ -85,10 +85,10 @@ def clearAll(board, sym):
 #
 #  Insert your implementations of vLineAt and hLineAt here
 #
-def vLineAt (board, c):
+def vLineAt (board, r, c):
   meio = len(board)//2
   contaPeca = 0
-  for i in range (meio-1,0,--1):
+  for i in range(meio-1,0,--1):
     if (board[meio][c] == board[i][c] ):
       contaPeca += 1
     
