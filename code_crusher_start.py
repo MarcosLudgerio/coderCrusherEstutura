@@ -94,12 +94,27 @@ def clearAll(board, sym):
 #  vLineAt - retorna true false se não tem linhas que formam um trio
 #  board - tem 6 colunas, cada uma com 5 posições possiveis
 #  0 - print, 1 - if, 2 - while, 3 - for, 4 - def
-def vLineAt(board, coluna, linha):
-  coluna2 = []
-  print(board[linha])
-  for i in range(8):
-    coluna2.append(board[i][coluna])
-  print(coluna2)
+
+
+def hLineAt(board, coluna, linha):
+  print("-"*8)
+  print("linha", linha, "coluna", coluna)
+  print("board[linnha]:", board[linha]) #board[linha] - linha selecionada
+  print("elementSelected", board[linha][coluna]) #board[linha][coluna] - retorna o elemento que foi clicado
+  print("-"*8)
+  lineSelect = board[linha]
+  elementSelect = board[linha][coluna]
+  retorno = True #Leia retorono como: "ele pode trocar?"
+
+  for i in range(len(lineSelect) - 2):
+    if(lineSelect[i] == elementSelect):
+      if(lineSelect[i-1] != elementSelect) and (lineSelect[i-2] != elementSelect):
+        retorno = False # retorno false == "não, ele não pode trocar"
+        print("Entrei no if dois!")
+      retorno = True
+      print("lineSelect[i]", lineSelect[i],"lineSelect[i+1]", lineSelect[i + 1])
+
+  return retorno
 
 #  Report whether or not two pieces on the board can be swapped.  The function
 #  should only return true when performing the swap results in a line being
@@ -114,8 +129,12 @@ def vLineAt(board, coluna, linha):
 #
 def canSwap(board, r1, c1, r2, c2):
   #c - Coluna, r - linha, 1 - o que selecionou primeiro, 2 - o que quer trocar
-  vLineAt(board, c1, r1)
-  return True
+  print("-" * 10)
+  print("Dentro do canSwap", hLineAt(board, c1, r1))
+  if(hLineAt(board, c1, r1)): #se ele não puder trocar
+    print("Entradno no hline")
+    return False
+
 #
 #  Identify two adjacent positions on the board that can be swapped to 
 #  form a line.
