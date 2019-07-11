@@ -85,38 +85,31 @@ def clearAll(board, sym):
 #
 #  Insert your implementations of vLineAt and hLineAt here
 #
-def vLineAt (board, r, c):
-  meio = len(board)//2
-  contaPeca = 0
-  for i in range(meio-1,0,--1):
-    if (board[meio][c] == board[i][c] ):
-      contaPeca += 1
-    
-  for i in range (meio+1,len(board)):
-    if (board[meio][c] == board[i][c] ):
-      contaPeca += 1
-  if (contaPeca >= 3):
-    return True
-  else:
-    return False
+def vLineAt(board, line, column):
+  boolean = False
+  if line != None and column != None and (line>=2 or line == (len(board)-1)):
+    if (board[line][column] == board[line-1][column] and board[line][column] == board[line-2][column]):
+      boolean = True
+  if line != None and column != None and (line>=1 and line<(len(board)-1)):
+    if (board[line][column] == board[line+1][column] and board[line][column] == board[line-1][column]):
+      boolean = True
+  if line != None and column != None and (line>=0 and line<(len(board)-2)):
+    if (board[line][column] == board[line+1][column] and board[line][column] == board[line+2][column]):
+      boolean = True
+  return boolean
 
-
-
-def hLineAt (board, r):
-  meio = len(board[r])//2
-  contaPeca = 0
-  for i in range (meio-1,0,--1):
-    if (board[r][meio] == board[r][i]):
-      contaPeca += 1
-  
-  for j in range (meio+1,len(board[r])):
-    if (board[r][meio] == board[r][j]):
-      contaPeca += 1
-  
-  if (contaPeca >= 3):
-    return True
-  else:
-    return False
+def hLineAt(board, line, column):
+  boolean = False
+  if line != None and column != None and (column>=2 or column == (len(board[line])-1)):
+    if (board[line][column] == board[line][column-1] and board[line][column] == board[line][column-2]):
+      boolean = True
+  if line != None and column != None and (column>=1 and column<(len(board[line])-1)):
+    if (board[line][column] == board[line][column-1] and board[line][column] == board[line][column+1]):
+      boolean = True
+  if line != None and column != None and (column>=0 and column<(len(board[line])-2)):
+    if (board[line][column] == board[line][column+1] and board[line][column] == board[line][column+2]):
+      boolean = True
+  return boolean
 
 
 
@@ -127,14 +120,23 @@ def hLineAt (board, r):
 #  formed.
 #
 #  Parameters:
-#    board: The game board to be checked
+#    board: The game board to be checkedgit
 #    r1, c1: The row and column of the first piece involved in the swap
 #    r2, c2: The row and column of the second piece to swap
 #
 #  Returns: True if the proposed swap creates a line.  False otherwise.
 
 def canSwap(board, r1, c1, r2, c2):
-  return True
+	swap(board,r1,c1,r2,c2)
+	if hLineAt(board,r1,c1) or hLineAt(board,r2,c2):
+		swap(board,r1,c1,r2,c2)
+		return True
+	elif vLineAt(board,r1,c1) or vLineAt(board,r2,c2):
+		swap(board,r1,c1,r2,c2)
+		return True
+	else:
+		swap(board,r1,c1,r2,c2)
+		return False
 
 #
 #  Identify two adjacent positions on the board that can be swapped to 
