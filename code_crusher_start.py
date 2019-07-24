@@ -85,10 +85,10 @@ def clearAll(board, sym):
 #
 #  Insert your implementations of vLineAt and hLineAt here
 #
-def vLineAt (board, c):
+def vLineAt (board, r,c):
   meio = len(board)//2
   contaPeca = 0
-  for i in range (meio-1,0,--1):
+  for i in range (mei,0,--1):
     if (board[meio][c] == board[i][c] ):
       contaPeca += 1
     
@@ -100,9 +100,7 @@ def vLineAt (board, c):
   else:
     return False
 
-
-
-def hLineAt (board, r):
+def hLineAt (board, r,c):
   meio = len(board[r])//2
   contaPeca = 0
   for i in range (meio-1,0,--1):
@@ -134,6 +132,8 @@ def hLineAt (board, r):
 #  Returns: True if the proposed swap creates a line.  False otherwise.
 
 def canSwap(board, r1, c1, r2, c2):
+  if ():
+
   return True
 
 #
