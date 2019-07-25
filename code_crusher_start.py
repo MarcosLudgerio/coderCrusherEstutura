@@ -939,7 +939,7 @@ def drawItem(item, x, y, images):
     drawImage(images[item], x, y)
 
 def drawBoard(board, x, y, sr, sc, images, sel_images):
-  background("black")
+  background("blue")
   for r in range(len(board)):
     for c in range(len(board[r])):
       # Draw an item that is selected in a different color
@@ -1757,7 +1757,7 @@ def main():
   setAutoUpdate(False)
   while not closed():
     clear()
-    background("black")
+    background("blue")
     drawImage(bg, 0, 0)
     drawImage(cc_b, getWidth() // 2 - getWidth(cc_b) // 2, 150)
   
