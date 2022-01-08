@@ -8,7 +8,7 @@
  <a href="#desc">Descrição</a> •
  <a href="#tecnologias">Tecnologias</a> • 
  <a href="#executando">Executar o projeto</a> • 
- <a href="#autor">Autor</a>
+ <a href="#autor">Autores</a>
 </p>
 
 <div id="desc"/>
@@ -45,23 +45,23 @@ $ py code_crusher_start.py
 
 <div id="autor" />
 
-## 👩‍💻 Autor 
+## 👩‍💻 Autores
 
-<table>
+<table align="center" >
    <tr>
-     <td align="center">
+     <td>
         <a href="https://github.com/MarcosLudgerio">
             <img style="border-radius: 50%;" src="https://github.com/MarcosLudgerio.png" width="100px;" alt=""/>
         </a>
         <br/><sub><b>Marcos Ludgério</b></sub>
      </td>
-    <td align="center">
+    <td>
         <a href="https://github.com/camilatereza">
             <img style="border-radius: 50%;" src="https://github.com/camilatereza.png" width="100px;" alt=""/>
         </a>
         <br/><sub><b>Camila Tereza</b></sub>
     </td>
-    <td align="center">
+    <td>
         <a href="https://github.com/VitorAmrm">
             <img style="border-radius: 50%;" src="https://github.com/VitorAmrm.png" width="100px;" alt=""/>
         </a>
