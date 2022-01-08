@@ -1,4 +1,4 @@
-# 🎮 coderCrusherEstutura
+# 🎮 CoderCrusher - Estutura de Dados
 
 <div align="center" display="flex" style="justify-content:flex-start;">
       <img align="center" alt="js" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
@@ -14,6 +14,8 @@
 <div id="desc"/>
 
 ## 📝 Descrição
+Esse repositório foi realizado para finalizar o trabalho da disciplina de Estrutura de Dados - ED. 
+Desenvolvido por alunos para aplicar conhecimentos adiquiridos durante a disciplina.
 Consiste em um jogo, estilo Match-3, desenvolvido utilizando python, utilizando bibliotecas de interfaces gráficas conhecidas.
 É um jogo implememtando a lógica match-3 e utiliza alguns conceitos fundamentais da estrutura de dados.
 
