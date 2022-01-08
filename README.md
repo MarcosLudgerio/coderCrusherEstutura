@@ -51,9 +51,21 @@ $ py code_crusher_start.py
    <tr>
      <td align="center">
         <a href="https://github.com/MarcosLudgerio">
-         <img style="border-radius: 50%;" src="https://avatars0.githubusercontent.com/u/43012976?s=460&u=1163c04d9f35b577063b3f6550ae520c4dd2f866&v=4" width="100px;" alt=""/>
+            <img style="border-radius: 50%;" src="https://github.com/MarcosLudgerio.png" width="100px;" alt=""/>
         </a>
         <br/><sub><b>Marcos Ludgério</b></sub>
      </td>
+    <td align="center">
+        <a href="https://github.com/camilatereza">
+            <img style="border-radius: 50%;" src="https://github.com/camilatereza.png" width="100px;" alt=""/>
+        </a>
+        <br/><sub><b>Camila Tereza</b></sub>
+    </td>
+    <td align="center">
+        <a href="https://github.com/VitorAmrm">
+            <img style="border-radius: 50%;" src="https://github.com/VitorAmrm.png" width="100px;" alt=""/>
+        </a>
+        <br/><sub><b>Camila Tereza</b></sub>
+    </td>
    </tr>
 </table>
